@@ -28,7 +28,7 @@ source $MKLIB/util/sudo.sh
 source $MKLIB/util/setperm.sh
 source $MKLIB/util/f2c.sh
 
-export PATH="/system/bin:/sbin:/vendor/bin:/system/sbin:/system/xbin:/system/product/bin:/system/usr/share/bin-get/bin:/system/system_ext/bin"
+export PATH="/system/bin:/sbin:/system/sbin:/system/xbin:/system/usr/share/bin-get/bin:/system_ext/bin"
 
 get_conf_from_file() {
   local file="$1"
