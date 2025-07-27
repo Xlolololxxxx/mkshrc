@@ -1,6 +1,6 @@
-# Systemless Mkshrc
+# Direct Mkshrc Installation
 
-Pprovide a systemless implementation of mkshrc for a better terminal experience on Android devices.
+Provide mkshrc functionality directly installed to the filesystem for devices with RW mounted root, without systemless bind mounts.
 
 # FIRST RUN
 
@@ -16,11 +16,36 @@ stew install zyedidia/micro
 
 ## Installation
 
+**For devices with RW mounted root filesystem:**
+
+```shell
+# Download or clone this repository
+# Run as root:
+./install.sh
+```
+
+**For Magisk users (systemless approach):**
+
 Via [MMRL](https://github.com/DerGoogler/MMRL) or via the [MMRL CLI](https://github.com/DerGoogler/MMRL-CLI)
 
 ```shell
 mmrl install -y mkshrc
 ```
+
+Note: The direct installation method is for devices where `/` and `/system_ext` are RW mounted, while `/vendor`, `/product` etc. remain read-only (erofs). This avoids the need for systemless bind mounts.
+
+## Uninstallation
+
+**For direct installation:**
+
+```shell
+# Run as root:
+/usr/share/lib-mkshrc/uninstall.sh
+```
+
+**For Magisk users:**
+
+Disable the module in MMRL or Magisk Manager.
 
 ## Root directory customization
 

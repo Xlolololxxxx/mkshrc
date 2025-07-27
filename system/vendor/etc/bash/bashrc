@@ -1,3 +1,0 @@
-if [ -f "/system/etc/bash/bashrc" ]; then
-  source /system/etc/bash/bashrc
-fi
